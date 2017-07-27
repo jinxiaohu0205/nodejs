@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="/editinfo/<%=result[0].id%>" method="post">
+    姓名：<input type="text" name="name" value="<%=result[0].name%>"><br>
+    年龄：<input type="text" name="age" value="<%=result[0].age%>"><br>
+    性别：男<input type="radio" name="sex" value="1" <%if(result[0].sex==1){%>checked<%}%>>
+    女: <input type="radio" name="sex" value="2" <%if(result[0].sex==2){%>checked<%}%>>
+    保密: <input type="radio" name="sex" value="3" <%if(result[0].sex==3){%>checked<%}%>><br>
+    <!--<input type="hidden" name="id" value="<%=result[0].id%>">-->
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

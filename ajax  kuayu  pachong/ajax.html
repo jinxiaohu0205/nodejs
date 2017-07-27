@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url:"http://localhost:9999",
+            dataType:"jsonp",
+            jsonp:"callback",
+//            jsonpCallback:"aa"
+            success:function(e){
+                var data=JSON.parse(e);
+                var table=document.querySelector("table");
+                for(var i=0;i<data.length;i++){
+                    var tr=document.createElement("tr");
+                    var td="";
+                    td+="<td>"+data[i].id+"</td>";
+                    td+="<td>"+data[i].name+"</td>";
+                    td+="<td>"+data[i].prices+"</td>";
+                    tr.innerHTML=td;
+                    table.appendChild(tr);
+                }
+            }
+        })
+//        function aa(e){
+//            console.log(e);
+//        }
+    </script>
+
+    <!--<script>-->
+        <!--function aa(info){-->
+<!--//            var data=JSON.parse(info);-->
+           <!--console.log(info);-->
+        <!--}-->
+    <!--</script>-->
+    <!--<script src="http://localhost:9999/?callback=aa"></script>-->
+</head>
+<script>
+</script>
+<body>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>价格</th>
+        </tr>
+    </table>
+</body>
+</html>

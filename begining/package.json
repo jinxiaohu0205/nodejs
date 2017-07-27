@@ -1,0 +1,6 @@
+{
+  "name":"sakljdklas",
+  "bin":{
+    "demo":"index.js"
+  }
+}

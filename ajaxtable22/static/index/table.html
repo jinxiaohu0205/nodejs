@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/js/angular.min.js"></script>
+    <!--<script src="bower_components/angular/angular.min.js"></script>-->
+    <script src="/js/angular-route.js"></script>
+    <script src="/js/angular-animate.js"></script>
+    <!--<script src="/js/add.js"></script>-->
+    <script src="/js/index.js"></script>
+    <script src="../../ajaxtable.js"></script>
+
+</head>
+
+<body>
+<table>
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    <tr ng-repeat="item in data">
+        <td><input type="text" ng-model="item.name" ng-blur="blur(item.id,item.name,'name')"></td>
+        <td><input type="text" ng-model="item.age" ng-blur="blur(item.id,item.age,'age')"></td>
+        <td><input type="text" ng-model="item.sex" ng-blur="blur(item.id,item.sex,'sex')"></td>
+        <td><a href="javascsript:;" ng-click="del(item.id)">删除</a></td>
+    </tr>
+</table>
+<a href="#!/add/" class="add">添加</a>
+<div class="zz" ng-show="isshow==true"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--<script src="/js/mui.min.js"></script>-->
+    <link href="/css/mui.min.css" rel="stylesheet"/>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/angular-animate.js"></script>
+    <script src="/js/angular-route.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers.js"></script>
+    <script src="/js/route.js"></script>
+
+</head>
+<script>
+    if(!localStorage.welcome){
+        localStorage.welcome="yes";
+            location.href="/welcome";
+    }
+</script>
+<body ng-app="myapp">
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    <h1 class="mui-title">标题</h1>
+</header>
+
+<div ng-view>
+</div>
+
+<nav class="mui-bar mui-bar-tab" ">
+    <a class="mui-tab-item mui-active" href="/#!">
+        <span class="mui-icon mui-icon-home"></span>
+        <span class="mui-tab-label">首页</span>
+    </a>
+    <a class="mui-tab-item" href="#!/phone">
+        <span class="mui-icon mui-icon-phone"></span>
+        <span class="mui-tab-label">电话</span>
+    </a>
+    <a class="mui-tab-item" href="#!/do">
+        <span class="mui-icon mui-icon-email"></span>
+        <span class="mui-tab-label">待办</span>
+    </a>
+    <a class="mui-tab-item">
+        <span class="mui-icon mui-icon-gear"></span>
+        <span class="mui-tab-label">设置</span>
+    </a>
+</nav>
+
+</body>
+
+</html>

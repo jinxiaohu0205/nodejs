@@ -1,0 +1,20 @@
+// alert(2);
+angular.module("route",["ngRoute"])
+    .config(["$routeProvider",function(route){
+        route.when("/",{
+            templateUrl:"/tpl/main.html",
+            controller:"main"
+        }).when("/phone",{
+            templateUrl:"/tpl/phone.html",
+            controller:"phone"
+        }).when("/do",{
+            templateUrl:"/tpl/do.html",
+            controller:"do"
+        }).when("/docon",{
+            templateUrl:"/tpl/docon.html",
+            controller:"docon"
+        }).when("/editcon",{
+            templateUrl:"/tpl/editcon.html",
+            controller:"editcon"
+        })
+    }])

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<script>
+    window.onload=function(){
+       $(".btn").click(function(){
+           $.ajax({
+               url:"/zhihu",
+               data:{url:"http://www.baidu.com"},
+               success:function(e){
+                   var img=$("<img>");
+                  $("div").append(img);
+                  $("img").attr("src",e);
+               }
+           })
+       })
+    }
+</script>
+<body>
+<style>
+    div{
+        width: 200px;
+        height:200px;
+        border:1px solid red;
+    }
+</style>
+<div>
+
+</div>
+<input type="button" class="btn" value="按钮">
+</body>
+</html>

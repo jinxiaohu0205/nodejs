@@ -1,0 +1,42 @@
+
+<link rel="stylesheet" href="/css/edit.css">
+<style>
+
+    .view-animate {
+        transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+        position: absolute;
+        top:0;
+        width:100%;
+        border:1px solid #000;
+
+
+    }
+
+    .view-animate.ng-leave {
+        display:block;
+        top:0;
+    }
+
+    .view-animate.ng-enter {
+
+        top:100%;
+    }
+    .view-animate.ng-enter.ng-enter-active {
+
+        top:0;
+    }
+    .view-animate.ng-leave.ng-leave-active {
+
+        top:-100%;
+    }
+
+</style>
+<a href="#!/">返回</a>
+<form >
+    姓名: <input type="text" name="name" ng-model="name"><br>
+    年龄: <input type="text" name="age" ng-model="age"><br>
+    性别: 男：<input type="radio" name="sex"   ng-model="sex" value="1" >
+    女：<input type="radio" name="sex"  ng-model="sex" value="2" >
+    保密：<input type="radio" name="sex"  ng-model="sex" value="3" ><br>
+    <input type="submit" value="完成" ng-click="add();">
+</form>

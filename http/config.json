@@ -1,0 +1,15 @@
+{
+  "type":{
+    ".jpg":"imge/jpeg",
+    ".css":"text/css",
+    ".html":"text/html",
+    ".js":"application/x-javascript"
+  },
+  "root":{
+    "dir":"hhh"
+  },
+  "index":{
+    "index":"index.html"
+  }
+
+}

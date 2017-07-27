@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+<table>
+    <%=id%>
+    <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
+    <!--<%if(=result.length==0){%>-->
+    <!--<tr onclose="4">没有任何信息</tr>-->
+    <!--<%}%>-->
+    <!--<%else{%>-->
+    <!--<%for(var i=0;i<result.length;i++){%>-->
+    <!--<tr>-->
+        <!--<td><%result[i].name%></td>-->
+        <!--<td><%result[i].sex%></td>-->
+        <!--<td><%result[i].age%></td>-->
+        <!--<td>删除</td>-->
+    <!--</tr>-->
+    <!--<%}%>-->
+    <!--<%}%>-->
+</table>
+<div class="add"><a href="/add">添加</a></div>
+</body>
+</html>
